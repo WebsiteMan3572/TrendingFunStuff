@@ -2,227 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AeroGoods - Quality Innovative Products</title>
+  <title>AeroGoods - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Fonts: Roboto (a modern, clean sans-serif similar to Frutiger Aero) -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Overall Background: using a fixed, publicly available Unsplash image */
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: url('https://images.unsplash.com/photo-1564869731802-b0a21d2f1a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      padding: 0;
-    }
-    /* Overlay to give a modern, airy feel */
-    .overlay {
-      background: rgba(255, 255, 255, 0.95);
-      min-height: 100vh;
-    }
-    /* Navbar styling */
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.8) !important;
-    }
-    .navbar-brand, .nav-link {
-      color: #fff !important;
-    }
-    /* Hero Section styling with a modern vibe */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center;
-      background-size: cover;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* Section padding */
-    .section {
-      padding: 80px 0;
-    }
-    /* Card images styling */
-    .card img {
-      height: 200px;
-      object-fit: cover;
-    }
+    body { font-family: 'Roboto', sans-serif; background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed; background-size: cover; margin: 0; padding: 0; }
+    .overlay { background: rgba(255,255,255,0.85); min-height: 100vh; }
+    .navbar { background-color: rgba(0,0,0,0.8) !important; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .hero { background: url('https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center; background-size: cover; color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); height: 60vh; display: flex; align-items: center; justify-content: center; position: relative; }
+    .hero::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
+    .hero .container { position: relative; z-index: 1; }
+    .section { padding: 80px 0; }
+    .btn-primary { background-color: #007bff; border: none; }
+    .btn-primary:hover { background-color: #0056b3; }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home">AeroGoods</a>
+        <a class="navbar-brand" href="index.html">AeroGoods</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <!-- Home Section (Hero) -->
     <section id="home" class="hero section">
       <div class="container text-center">
         <h1 class="display-4">Welcome to AeroGoods</h1>
-        <p class="lead">Delivering quality, innovative products that elevate your everyday life.</p>
-        <a href="#products" class="btn btn-primary btn-lg">Explore Our Collection</a>
+        <p class="lead">Quality & Fun Products that Elevate Your Lifestyle</p>
+        <a href="shop.html" class="btn btn-primary btn-lg">Shop Now</a>
       </div>
     </section>
-
-    <!-- Products Section -->
-    <section id="products" class="section">
-      <div class="container">
-        <h2 class="text-center mb-5">Trending Exclusive Products</h2>
-        <div class="row g-4">
-          <!-- Product 1: Portable Blender -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://images.unsplash.com/photo-1590502593744-7c8e35725b53?ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" class="card-img-top" alt="Portable Blender">
-              <div class="card-body">
-                <h5 class="card-title">Portable Blender</h5>
-                <p class="card-text">Perfect for on-the-go smoothies and healthy drinks. $29.99</p>
-                <a href="#" class="btn btn-outline-primary">Buy Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- Product 2: UV Phone Sanitizer -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://images.unsplash.com/photo-1601564268604-10c07a31d6a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" class="card-img-top" alt="UV Phone Sanitizer">
-              <div class="card-body">
-                <h5 class="card-title">UV Phone Sanitizer</h5>
-                <p class="card-text">Keep your phone germ-free with advanced UV technology. $39.99</p>
-                <a href="#" class="btn btn-outline-primary">Buy Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- Product 3: Smart Posture Corrector -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://images.unsplash.com/photo-1583454110554-b2189e7abf32?ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" class="card-img-top" alt="Smart Posture Corrector">
-              <div class="card-body">
-                <h5 class="card-title">Smart Posture Corrector</h5>
-                <p class="card-text">Improve your posture and reduce back pain with smart sensors. $49.99</p>
-                <a href="#" class="btn btn-outline-primary">Buy Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- Product 4: Wireless Earbuds -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://images.unsplash.com/photo-1518445694698-95bfc292f9e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" class="card-img-top" alt="Wireless Earbuds">
-              <div class="card-body">
-                <h5 class="card-title">Wireless Earbuds</h5>
-                <p class="card-text">Experience high-quality sound with true wireless freedom. $59.99</p>
-                <a href="#" class="btn btn-outline-primary">Buy Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- Product 5: LED Strip Lights -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://images.unsplash.com/photo-1561414920-6f84a039ad13?ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" class="card-img-top" alt="LED Strip Lights">
-              <div class="card-body">
-                <h5 class="card-title">LED Strip Lights</h5>
-                <p class="card-text">Customize your ambiance with versatile LED lighting. $19.99</p>
-                <a href="#" class="btn btn-outline-primary">Buy Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- Product 6: Mini Projector -->
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://images.unsplash.com/photo-1585059895550-66a421a004d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" class="card-img-top" alt="Mini Projector">
-              <div class="card-body">
-                <h5 class="card-title">Mini Projector</h5>
-                <p class="card-text">Transform any space into a home theater experience. $89.99</p>
-                <a href="#" class="btn btn-outline-primary">Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="section">
+      <div class="container text-center">
+        <h2>Experience the Retro-Modern Vibe</h2>
+        <p>Discover products that blend 2000s nostalgia with today’s innovation.</p>
       </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="section bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">About AeroGoods</h2>
-        <p class="lead text-center">At AeroGoods, our mission is to offer quality, innovative products that enhance your lifestyle. Our carefully curated collection features exclusive items that combine modern design with exceptional functionality.</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="text-center mb-5">Contact Us</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="py-4 bg-dark text-white text-center">
       <div class="container">
         <p class="mb-0">&copy; 2025 AeroGoods. All Rights Reserved.</p>
       </div>
     </footer>
   </div>
-
-  <!-- Bootstrap Bundle with Popper JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Hidden MIT License (not visible on the page) -->
-  <!--
-    MIT License
-
-    Copyright (c) 2025 AeroGoods
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
-  -->
 </body>
 </html>
